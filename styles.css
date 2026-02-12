@@ -316,3 +316,25 @@ h2 {
     transform: scale(1.05);
     background: var(--secondary-color);
 } 
+.valentine-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Yes Button */
+#yesBtn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* No Button */
+#noBtn {
+    background-color: #ddd;
+    color: #333;
+}
