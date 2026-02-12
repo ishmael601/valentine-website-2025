@@ -5,7 +5,7 @@
 const CONFIG = {
     // Your Valentine's name that will appear in the title
     // Example: "Jade", "Sarah", "Mike"
-    valentineName: "Jade",
+    valentineName: "Jyotima",
 
     // The title that appears in the browser tab
     // You can use emojis! 💝 💖 💗 💓 💞 💕
@@ -84,6 +84,26 @@ const CONFIG = {
         volume: 0.5                        // Volume level (0.0 to 1.0)
     }
 };
+let yesSize = 1;
+let noSize = 1;
+
+window.addEventListener("DOMContentLoaded", () => {
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    if (noBtn && yesBtn) {
+        noBtn.addEventListener("click", () => {
+            // Increase Yes size
+            yesSize += 0.4;
+            yesBtn.style.transform = `scale(${yesSize})`;
+
+            // Decrease No size
+            noSize -= 0.1;
+            if (noSize < 0.3) noSize = 0.3;
+            noBtn.style.transform = `scale(${noSize})`;
+        });
+    }
+});
 
 // Don't modify anything below this line unless you know what you're doing
 window.VALENTINE_CONFIG = CONFIG; 
